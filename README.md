@@ -17,7 +17,7 @@ Run all cells from top to bottom with internet access. The notebook installs NCB
 - Source: NCBI Datasets assembly \`GCF_000001405.40\` (GRCh38.p14), requesting \`rna,gff3\`.
 - The notebook reads NCBI's assembly data report and asserts the expected assembly and annotation release \`GCF_000001405.40-RS_2025_08\` before modeling.
 - Label: RefSeq accession prefix \`NM_\` = 1 and \`NR_\` = 0; other prefixes are excluded.
-- GFF3 transcript records are joined to parent-gene biotypes by NCBI GeneID, then audited against the accession-prefix labels. Mismatches remain visible for review and are not silently relabeled.
+- Direct transcript-level GFF keys are checked against accession prefixes. Parent-gene biotypes are joined by NCBI GeneID and disagreements are reported separately because gene-level and transcript-level labels are not interchangeable; neither is silently relabeled.
 - The 20 nt minimum is a data-integrity floor, not a biological length cutoff; short noncoding RNAs are retained and reported.
 - Model fitting uses up to 3,000 randomly sampled records per class after the full parsed set is audited. Metrics therefore describe this capped, class-balanced modeling sample; the held-out class prevalence is printed and saved.
 

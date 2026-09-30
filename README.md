@@ -32,7 +32,7 @@ A threshold sensitivity analysis repeats clustering and grouped evaluation at 70
 - Majority-class baseline.
 - Logistic regression with transcript length, GC fraction, and normalized 3-mer frequencies.
 - Character 3–5-mer TF-IDF with logistic regression; regularization is selected on validation AUPRC only.
-- The final test is evaluated once after selection. Outputs include precision, recall, F1, AUROC, AUPRC, confusion matrix, bootstrap intervals, and validation-only seed sensitivity.
+- The final test is evaluated once after selection. Outputs include precision, recall, F1, AUROC, AUPRC, confusion matrix, homology-cluster bootstrap intervals, and split-seed sensitivity measured on validation groups only.
 - Error tables summarize mistakes by label, transcript length, GC content, and GFF3 biotype. They include accession/header examples for review but do not export sequences in the result bundle.
 
 ## Limits and source handling
